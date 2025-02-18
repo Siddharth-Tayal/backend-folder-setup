@@ -1,10 +1,10 @@
 {
   "name": "backend-folder-setup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is the backend folder structure for the production projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node index.js"
   },
   "repository": {
     "type": "git",
