@@ -1,25 +1,30 @@
 const fs = require("fs");
 const path = require("path");
 
-const folders = ["models", "controllers", "routes", "utils", "middlewares", "config"];
-const files = ["server.js", "app.js"];
+(function setupProject() {
+    console.log("🚀 Running setup script...");
 
-// Create folders if they don't exist
-folders.forEach(folder => {
-    const folderPath = path.join(__dirname, folder);
-    if (!fs.existsSync(folderPath)) {
-        fs.mkdirSync(folderPath);
-        console.log(`Created folder: ${folder}`);
-    }
-});
+    const projectRoot = process.cwd();
+    const folders = ["models", "controllers", "utils", "middlewares", "routes", "config"];
+    const files = ["server.js", "app.js"];
 
-// Create files if they don't exist
-files.forEach(file => {
-    const filePath = path.join(__dirname, file);
-    if (!fs.existsSync(filePath)) {
-        fs.writeFileSync(filePath, "// Entry point of the application\n", "utf8");
-        console.log(`Created file: ${file}`);
-    }
-});
+    // Create folders if they don’t exist
+    folders.forEach(folder => {
+        const folderPath = path.join(projectRoot, folder);
+        if (!fs.existsSync(folderPath)) {
+            fs.mkdirSync(folderPath, { recursive: true });
+            console.log(`✅ Created folder: ${folder}`);
+        }
+    });
 
-console.log("Folder structure setup complete!");
+    // Create files if they don’t exist
+    files.forEach(file => {
+        const filePath = path.join(projectRoot, file);
+        if (!fs.existsSync(filePath)) {
+            fs.writeFileSync(filePath, "// Entry point\n", "utf8");
+            console.log(`✅ Created file: ${file}`);
+        }
+    });
+
+    console.log("🎉 Folder structure setup complete!");
+})();

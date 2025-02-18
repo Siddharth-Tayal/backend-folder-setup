@@ -1,6 +1,6 @@
 {
   "name": "backend-folder-setup",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is the backend folder structure for the production projects.",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Siddharth-Tayal/backend-folder-setup#readme",
   "dependencies": {
+    "backend-folder-setup": "^1.0.1",
     "path": "^0.12.7"
   }
 }
