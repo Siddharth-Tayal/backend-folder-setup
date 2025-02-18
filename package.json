@@ -4,7 +4,7 @@
   "description": "This is the backend folder structure for the production projects.",
   "main": "setup.js",
   "scripts": {
-    "postinstall": "node setup.js"
+    "prepare": "node setup.js"
   },
   "repository": {
     "type": "git",
