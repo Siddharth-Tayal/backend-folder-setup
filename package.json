@@ -1,0 +1,22 @@
+{
+  "name": "backend-folder-setup",
+  "version": "1.0.0",
+  "description": "This is the backend folder structure for the production projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siddharth-Tayal/backend-folder-setup.git"
+  },
+  "author": "Siddharth Tayal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Siddharth-Tayal/backend-folder-setup/issues"
+  },
+  "homepage": "https://github.com/Siddharth-Tayal/backend-folder-setup#readme",
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
